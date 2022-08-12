@@ -56,6 +56,6 @@ app.post('/failure', function(req, res){
 })
 
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {   // the first is a dynamic port that heroku will define in the go. and the second port for running the server locally.
   console.log('this server is running in port '+port);
 });
